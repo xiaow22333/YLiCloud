@@ -1,0 +1,118 @@
+#app {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.sidebar {
+    height: 100%;
+    background-color: #e6e9ed;
+    overflow-y: hidden;
+}
+
+#menu{
+    min-width: 115px;
+}
+
+#menu li{
+    padding-left: 10px;
+}
+
+#uel{
+    font-size: 20px;
+    transition: all 0.8s ease-in-out;
+}
+
+#uel:hover{
+    font-size: 14px;
+    color: #e85827;
+}
+
+#right_box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 1s ease-in-out;
+}
+
+#progressContainer {
+    margin-top: 10px;
+    /*visibility: hidden;*/
+}
+
+.progress {
+    height: 30px;
+    border-radius: 15px;
+    background-color: #e9ecef;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar {
+    background: linear-gradient(to right, #4caf50, #81c784);
+    height: 100%;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-weight: bold;
+    transition: width 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+#content {
+    flex-grow: 1;
+    background-color: #F5F5F5;
+    padding: 0.7rem;
+    margin: 0;
+    animation: fadeIn 0.6s linear forwards;
+}
+
+.files {
+    background-color: #bee6e6;
+    width: auto;
+    min-width: 35px;
+    max-width: 240px;
+    height: auto;
+    min-height: 60px;
+    max-height: 130px;
+    border-radius: 9px;
+    color:black;
+}
+
+@keyframes rainbow-slide {
+    0% { box-shadow: 0 2px 20px #ff4d4d; }
+    14% { box-shadow: 0 2px 20px #ffa600; }
+    28% { box-shadow: 0 2px 20px #ffef00; }
+    42% { box-shadow: 0 2px 20px #8ae600; }
+    57% { box-shadow: 0 2px 20px #00d300; }
+    71% { box-shadow: 0 2px 20px #00a6ff; }
+    85% { box-shadow: 0 2px 20px #0026ff; }
+    100% { box-shadow: 0 2px 20px #9600ff; }
+}
+
+.rainbow-border {
+    position: relative;
+    overflow: hidden;
+}
+
+.rainbow-border::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 5px;
+    background: transparent;
+    box-shadow: 0 2px 20px #ff4d4d;
+    animation: rainbow-slide 5s ease-in-out infinite;
+    opacity: 1;
+}

@@ -1,0 +1,14 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#content{
+    background-color: #396371;
+    flex: 14;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

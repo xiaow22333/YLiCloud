@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "npm-check-updates": "^16.14.20",
+    "oh-my-live2d": "^0.19.3",
+    "three": "^0.165.0"
+  }
+}

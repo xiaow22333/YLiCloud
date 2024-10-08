@@ -1,0 +1,70 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+
+#box {
+    width: 45%; /* 宽度设置为40% */
+    height: 55%; /* 高度设置为55% */
+    display: flex; /* 使用flex布局 */
+    justify-content: space-between; /* 水平方向上的对齐方式 */
+    align-items: stretch; /* 垂直方向上的对齐方式，拉伸子元素以填满容器高度 */
+    text-align: center;
+    position: relative; /* 相对定位，以便于绝对定位子元素 */
+    top: 30vh;
+
+    background: rgba( 199, 192, 182, 0.8 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+#login_box {
+    flex: 1;
+    padding: 4%;
+}
+
+#canvas {
+    min-width: 25%;
+    max-width: 50%;
+    flex: 0.3;
+    /*border: 1px black solid;*/
+    background: transparent;
+}
+.toast{
+    position: fixed;
+    right: 0;
+    top: 12vh;
+    transition: all 1.5s ease;
+}
+
+@media  (max-width: 1140px) {
+    #canvas{
+        min-width: 35%;
+    }
+}
+@media (max-width: 768px) {
+    #box {
+        /*top: 7vh;*/
+        width: 80%;
+        height: 100%;
+        flex-direction: column-reverse;
+    }
+    #canvas{
+        display: none;
+    }
+}
