@@ -2,6 +2,7 @@
 
 namespace Config;
 
+use App\Filters\AdminFilter;
 use App\Filters\LoginFilter;
 use CodeIgniter\Config\Filters as BaseFilters;
 use CodeIgniter\Filters\Cors;
@@ -36,6 +37,7 @@ class Filters extends BaseFilters
         'pagecache' => PageCache::class,
         'performance' => PerformanceMetrics::class,
         'login' => LoginFilter::class,
+        'admin' => AdminFilter::class,
     ];
 
     /**
@@ -71,7 +73,7 @@ class Filters extends BaseFilters
      */
     public array $globals = [
         'before' => [
-            'login' => ['except' => ['/', '/find', '/find/send', '/find/change','/files/s/*','/expired','/test']],
+            'login' => ['except' => ['/', '/find', '/find/send', '/find/change','/files/s/*','/expired','/admin/*','/test']],
         ],
         'after' => [
         ],

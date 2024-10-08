@@ -39,5 +39,14 @@ $routes->get('/term','PagesController::view/term');
 $routes->post('/exit','ExitController::UserExit');
 //登录过期
 $routes->get('/expired','PagesController::view/expired');
-//管理员页面
-$routes->get('/admin','PagesController::view/admin');
+//管理员页面路由
+$routes->group('admin', ['namespace' => 'App\Controllers'], function ($routes) {
+    $routes->get('login', 'PagesController::adminload/login');
+    $routes->post('verify', 'PagesController::adminload/verify');
+    $routes->get('index', 'PagesController::adminload/index',['filter' => 'admin']);
+    $routes->group('api',['namespace' => 'App\Controllers','filter' => 'admin'], function ($routes) {
+        $routes->get('home', 'AdminController::home');
+        $routes->get('management', 'AdminController::management');
+        $routes->get('feedback', 'AdminController::feedback');
+    });
+});

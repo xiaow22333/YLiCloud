@@ -129,7 +129,7 @@
                     </button>
                     <el-popconfirm title="确定退出？" @confirm="user_exit">
                         <template #reference>
-                            <el-button type="danger" icon="SwitchButton">登出</el-button>
+                            <el-button type="danger" icon="SwitchButton">安全退出</el-button>
                         </template>
                     </el-popconfirm>
                 </div>

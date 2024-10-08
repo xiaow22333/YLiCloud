@@ -38,13 +38,6 @@ body{
     padding: 4%;
 }
 
-#canvas {
-    min-width: 25%;
-    max-width: 50%;
-    flex: 0.3;
-    /*border: 1px black solid;*/
-    background: transparent;
-}
 .toast{
     position: fixed;
     right: 0;

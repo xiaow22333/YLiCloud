@@ -23,7 +23,8 @@ class LoginController extends Controller
         }
         if ($login['success']) {
             //设置cookie，用于被中间件检测拦截,并设置过期时间为1小时，md5加密名称
-            setcookie('959aca6b1338eead2254fa1d0c0b7827', 'c4ca4238a0b923820dcc509a6f75849b', time() + 3600);
+            //setcookie('959aca6b1338eead2254fa1d0c0b7827', 'c4ca4238a0b923820dcc509a6f75849b', time() + 3600);
+            session()->set('login', true);
             //登陆成功
             return redirect()->to('/index');
         } else {

@@ -10,7 +10,5 @@ class ExitController extends Controller
         $session = session();
         // 清除所有会话数据
         $session->destroy();
-        // 将cookie有效期设为过期
-        setcookie('959aca6b1338eead2254fa1d0c0b7827', '', time() - 3600);
     }
 }

@@ -51,7 +51,11 @@
 <div class="container">
     <div class="alert-box">
         <h1>系统提示</h1>
-        <p>您未登录或登录已过期，请返回首页登录。</p>
+        <?php if (session()->getFlashdata('error')) : ?>
+            <div class="alert alert-danger">
+                <?= session()->getFlashdata('error') ?>
+            </div>
+        <?php endif; ?>
         <button onclick="window.location.href='/';">重新登录</button>
     </div>
 </div>
